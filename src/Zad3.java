@@ -5,16 +5,18 @@ class Zad3 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Podaj swój wiek: ");
-        int age = scanner.nextInt();
+        double age = scanner.nextDouble();
 
-        if (age < 12) {
+        if (age < 12 && age >= 0) {
             System.out.println("Dziecko");
-        } else if (age <= 17) {
+        } else if (age >= 12 && age < 18) {
             System.out.println("Nastolatek");
-        } else if (age <= 64) {
+        } else if (age >= 18 && age < 65) {
             System.out.println("Dorosły");
-        } else {
+        } else if (age >= 65){
             System.out.println("Senior");
+        } else {
+            System.out.println("Błędny wiek");
         }
     }
 }
